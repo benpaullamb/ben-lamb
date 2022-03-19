@@ -8,13 +8,9 @@ import Education from './pages/Education';
 import Contact from './pages/Contact';
 import Interests from './pages/Interests';
 
-import NavBar from './components/NavBar';
-
 export default function App() {
   return (
-    <div className="h-full grid grid-rows-[auto_1fr]">
-      <NavBar />
-
+    <div className="h-full">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="skills" element={<Skills />} />

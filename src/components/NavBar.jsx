@@ -38,16 +38,12 @@ export default function NavBar() {
   ];
 
   return (
-    <nav className="p-4 relative bg-primary-900 shadow-lg">
-      <div className="container mx-auto flex justify-between">
-        <Link to="/" className="shrink-0 text-white text-2xl">
-          Ben Lamb
-        </Link>
-
+    <nav className="w-full p-8 absolute top-0">
+      <div className="container mx-auto mb-2 md:mb-0 flex justify-end items-center">
         {/* Desktop/tablet menu */}
-        <div className="hidden md:flex items-center text-white">
+        <div className="hidden md:flex items-center">
           {links.map(({ to, label }, i) => (
-            <Link to={to} key={to} className={classNames({ 'mr-4': i !== links.length - 1 })}>
+            <Link to={to} key={to} className={classNames('text-xl text-white', { 'mr-8': i !== links.length - 1 })}>
               {label}
             </Link>
           ))}
@@ -60,13 +56,13 @@ export default function NavBar() {
 
       {/* Mobile menu */}
       {showMobileMenu && (
-        <div className="w-full p-4 absolute top-full left-0 flex flex-col z-10 bg-primary-100 shadow-lg md:hidden">
+        <div className="w-full flex md:hidden flex-wrap gap-2">
           {links.map(({ to, label }, i) => (
             <Link
               to={to}
               onClick={() => setShowMobileMenu(false)}
               key={to}
-              className={classNames('text-lg', { 'mb-4': i !== links.length - 1 })}>
+              className="px-2 border border-white text-xl text-white">
               {label}
             </Link>
           ))}
