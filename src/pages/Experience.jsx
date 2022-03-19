@@ -1,7 +1,12 @@
+import Banner from '../components/Banner';
+import kyotoImage from '../assets/kyoto-unsplash.jpg';
+
 export default function Experience(props) {
   return (
-    <div>
-      <h1>Experience</h1>
-    </div>
+    <>
+      <Banner title="Experience" image={kyotoImage} />
+
+      <div className="px-8 py-16 container mx-auto">Content will go here</div>
+    </>
   );
 }
