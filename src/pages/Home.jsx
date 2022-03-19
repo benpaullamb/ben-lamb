@@ -11,7 +11,7 @@ export default function Home(props) {
         style={{ backgroundImage: `url("${tokyoImage}")` }}
         className="h-full px-4 md:px-0 
       flex justify-center items-center 
-      bg-cover bg-center bg-no-repeat bg-fixed 
+      bg-cover bg-center bg-no-repeat
       shadow-[inset_0_-10rem_4rem_-4rem_white]">
         <NavBar />
 
