@@ -43,7 +43,10 @@ export default function NavBar() {
         {/* Desktop/tablet menu */}
         <div className="hidden md:flex justify-end items-center">
           {links.map(({ to, label }, i) => (
-            <Link to={to} key={to} className={classNames('text-xl text-white', { 'mr-8': i !== links.length - 1 })}>
+            <Link
+              to={to}
+              key={to}
+              className={classNames('text-xl text-white font-bold', { 'mr-6': i !== links.length - 1 })}>
               {label}
             </Link>
           ))}
@@ -63,7 +66,7 @@ export default function NavBar() {
           className="w-full p-8 md:hidden 
             absolute top-0 left-0 z-10 
             shadow-xl bg-white">
-          <button onClick={() => setShowMobileMenu(false)} className="absolute top-8 right-8">
+          <button onClick={() => setShowMobileMenu(false)} className="absolute top-8 right-8 z-20">
             <XIcon className="w-6" />
           </button>
 
