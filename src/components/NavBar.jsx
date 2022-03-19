@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MenuIcon } from '@heroicons/react/solid';
+import { MenuIcon, XIcon } from '@heroicons/react/solid';
 import classNames from 'classnames';
 
 export default function NavBar() {
@@ -39,9 +39,9 @@ export default function NavBar() {
 
   return (
     <nav className="w-full p-8 absolute top-0">
-      <div className="container mx-auto mb-2 md:mb-0 flex justify-end items-center">
+      <div className="container mx-auto">
         {/* Desktop/tablet menu */}
-        <div className="hidden md:flex items-center">
+        <div className="hidden md:flex justify-end items-center">
           {links.map(({ to, label }, i) => (
             <Link to={to} key={to} className={classNames('text-xl text-white', { 'mr-8': i !== links.length - 1 })}>
               {label}
@@ -49,23 +49,30 @@ export default function NavBar() {
           ))}
         </div>
 
-        <button onClick={() => setShowMobileMenu(!showMobileMenu)} className="md:hidden">
-          <MenuIcon className="w-6 text-white" />
-        </button>
+        <div className="flex md:hidden justify-start items-center">
+          <button onClick={() => setShowMobileMenu(!showMobileMenu)}>
+            <MenuIcon className="w-6 text-white" />
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
       {showMobileMenu && (
-        <div className="w-full flex md:hidden flex-wrap gap-2">
-          {links.map(({ to, label }, i) => (
-            <Link
-              to={to}
-              onClick={() => setShowMobileMenu(false)}
-              key={to}
-              className="px-2 border border-white text-xl text-white">
-              {label}
-            </Link>
-          ))}
+        <div
+          className="w-full px-8 py-4 md:hidden 
+            absolute top-0 left-0 
+            shadow-xl bg-white">
+          <button onClick={() => setShowMobileMenu(false)} className="absolute top-4 right-8">
+            <XIcon className="w-6 text-black" />
+          </button>
+
+          <div className="grid grid-cols-2 gap-4">
+            {links.map(({ to, label }, i) => (
+              <Link to={to} onClick={() => setShowMobileMenu(false)} key={to} className="w-min inline-block text-xl">
+                {label}
+              </Link>
+            ))}
+          </div>
         </div>
       )}
     </nav>
