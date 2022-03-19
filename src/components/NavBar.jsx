@@ -49,6 +49,7 @@ export default function NavBar() {
           ))}
         </div>
 
+        {/* Mobile burger menu */}
         <div className="flex md:hidden justify-start items-center">
           <button onClick={() => setShowMobileMenu(!showMobileMenu)}>
             <MenuIcon className="w-6 text-white" />
@@ -59,20 +60,22 @@ export default function NavBar() {
       {/* Mobile menu */}
       {showMobileMenu && (
         <div
-          className="w-full px-8 py-4 md:hidden 
-            absolute top-0 left-0 
+          className="w-full p-8 md:hidden 
+            absolute top-0 left-0 z-10 
             shadow-xl bg-white">
-          <button onClick={() => setShowMobileMenu(false)} className="absolute top-4 right-8">
-            <XIcon className="w-6 text-black" />
+          <button onClick={() => setShowMobileMenu(false)} className="absolute top-8 right-8">
+            <XIcon className="w-6" />
           </button>
 
-          <div className="grid grid-cols-2 gap-4">
-            {links.map(({ to, label }, i) => (
-              <Link to={to} onClick={() => setShowMobileMenu(false)} key={to} className="w-min inline-block text-xl">
-                {label}
-              </Link>
-            ))}
-          </div>
+          {links.map(({ to, label }, i) => (
+            <Link
+              to={to}
+              onClick={() => setShowMobileMenu(false)}
+              key={to}
+              className={classNames('block text-xl', { 'mb-4': i !== links.length - 1 })}>
+              {label}
+            </Link>
+          ))}
         </div>
       )}
     </nav>
