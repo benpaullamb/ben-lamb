@@ -8,9 +8,13 @@ import Education from './pages/Education';
 import Contact from './pages/Contact';
 import Interests from './pages/Interests';
 
+import NavBar from './components/NavBar';
+
 export default function App() {
   return (
     <div className="h-full">
+      <NavBar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="skills" element={<Skills />} />
