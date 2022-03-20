@@ -6,7 +6,7 @@ import sunsetImage from '../assets/japan-sunset-unsplash.jpg';
 export default function Contact(props) {
   return (
     <>
-      <Banner title="Contact" image={sunsetImage} />
+      <Banner title="Contact" subtitle="Email | GitHub | LinkedIn" image={sunsetImage} />
 
       <div className="px-8 py-16 container mx-auto">
         <span className="mb-4 block text-lg">benpaullamb@gmail.com</span>
