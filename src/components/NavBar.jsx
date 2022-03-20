@@ -42,14 +42,18 @@ export default function NavBar() {
       <div className="container mx-auto">
         {/* Desktop/tablet menu */}
         <div className="hidden md:flex justify-end items-center">
-          {links.map(({ to, label }, i) => (
-            <Link
-              to={to}
-              key={to}
-              className={classNames('text-xl text-white font-bold', { 'mr-6': i !== links.length - 1 })}>
-              {label}
-            </Link>
-          ))}
+          <div className="bg-gray-400/50">
+            <div className="p-4 border-2 border-white backdrop-blur">
+              {links.map(({ to, label }, i) => (
+                <Link
+                  to={to}
+                  key={to}
+                  className={classNames('text-xl text-white font-bold', { 'mr-5': i !== links.length - 1 })}>
+                  {label}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Mobile burger menu */}
