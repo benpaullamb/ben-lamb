@@ -1,5 +1,5 @@
 import Banner from '../components/Banner';
-import tokyoImage from '../assets/tokyo-unsplash.jpg';
+import tokyoImage from '../assets/backgrounds/tokyo-unsplash.jpg';
 
 export default function Home(props) {
   return (

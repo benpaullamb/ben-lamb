@@ -1,5 +1,5 @@
 import Banner from '../components/Banner';
-import cityImage from '../assets/tokyo-city-unsplash.jpg';
+import cityImage from '../assets/backgrounds/tokyo-city-unsplash.jpg';
 
 export default function Education(props) {
   return (

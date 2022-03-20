@@ -1,5 +1,5 @@
 import Banner from '../components/Banner';
-import autumnImage from '../assets/japan-autumn-unsplash.jpg';
+import autumnImage from '../assets/backgrounds/japan-autumn-unsplash.jpg';
 
 export default function Skills(props) {
   return (

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MenuIcon, XIcon } from '@heroicons/react/solid';
-import classNames from 'classnames';
 
 export default function NavBar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -42,13 +41,10 @@ export default function NavBar() {
       <div className="container mx-auto">
         {/* Desktop/tablet menu */}
         <div className="hidden md:flex justify-end items-center">
-          <div className="bg-gray-400/50">
+          <div className="bg-gray-300/50">
             <div className="p-4 border-2 border-white backdrop-blur">
               {links.map(({ to, label }, i) => (
-                <Link
-                  to={to}
-                  key={to}
-                  className={classNames('text-xl text-white font-bold', { 'mr-5': i !== links.length - 1 })}>
+                <Link to={to} key={to} className="mr-5 last:mr-0 text-xl text-white font-bold">
                   {label}
                 </Link>
               ))}
@@ -75,11 +71,7 @@ export default function NavBar() {
           </button>
 
           {links.map(({ to, label }, i) => (
-            <Link
-              to={to}
-              onClick={() => setShowMobileMenu(false)}
-              key={to}
-              className={classNames('block text-xl', { 'mb-4': i !== links.length - 1 })}>
+            <Link to={to} onClick={() => setShowMobileMenu(false)} key={to} className="mb-4 last:mb-0 block text-xl">
               {label}
             </Link>
           ))}

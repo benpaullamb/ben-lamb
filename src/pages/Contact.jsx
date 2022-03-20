@@ -1,7 +1,7 @@
-import { ReactComponent as GitHubIcon } from '../assets/GitHub.svg';
-import { ReactComponent as LinkedInIcon } from '../assets/LinkedIn.svg';
+import { ReactComponent as GitHubIcon } from '../assets/companies/GitHub.svg';
+import { ReactComponent as LinkedInIcon } from '../assets/companies/LinkedIn.svg';
 import Banner from '../components/Banner';
-import sunsetImage from '../assets/japan-sunset-unsplash.jpg';
+import sunsetImage from '../assets/backgrounds/japan-sunset-unsplash.jpg';
 
 export default function Contact(props) {
   return (

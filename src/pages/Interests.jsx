@@ -1,5 +1,5 @@
 import Banner from '../components/Banner';
-import osakaImage from '../assets/osaka-unsplash.jpg';
+import osakaImage from '../assets/backgrounds/osaka-unsplash.jpg';
 
 export default function Interests(props) {
   return (
