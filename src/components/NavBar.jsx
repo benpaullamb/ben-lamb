@@ -43,7 +43,7 @@ export default function NavBar() {
           {/* Desktop/tablet menu */}
           <div className="hidden md:flex justify-end items-center">
             {links.map(({ to, label }, i) => (
-              <Link to={to} key={to} className="mr-5 last:mr-0 uppercase text-gray-800 font-medium">
+              <Link to={to} key={to} className="mr-8 last:mr-0 uppercase text-gray-800 font-medium">
                 {label}
               </Link>
             ))}
