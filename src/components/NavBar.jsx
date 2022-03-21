@@ -37,26 +37,24 @@ export default function NavBar() {
   ];
 
   return (
-    <nav className="w-full p-8 absolute top-0">
-      <div className="container mx-auto">
-        {/* Desktop/tablet menu */}
-        <div className="hidden md:flex justify-end items-center">
-          <div className="bg-gray-300/50">
-            <div className="p-4 border-2 border-white backdrop-blur">
-              {links.map(({ to, label }, i) => (
-                <Link to={to} key={to} className="mr-5 last:mr-0 text-xl text-white font-bold">
-                  {label}
-                </Link>
-              ))}
-            </div>
+    <nav className="w-full absolute top-0 bg-gray-100/50 shadow-md">
+      <div className="w-full p-4 backdrop-blur">
+        <div className="container mx-auto">
+          {/* Desktop/tablet menu */}
+          <div className="hidden md:flex justify-end items-center">
+            {links.map(({ to, label }, i) => (
+              <Link to={to} key={to} className="mr-5 last:mr-0 uppercase text-gray-800 font-medium">
+                {label}
+              </Link>
+            ))}
           </div>
-        </div>
 
-        {/* Mobile burger menu */}
-        <div className="flex md:hidden justify-start items-center">
-          <button onClick={() => setShowMobileMenu(!showMobileMenu)}>
-            <MenuIcon className="w-6 text-white" />
-          </button>
+          {/* Mobile burger menu */}
+          <div className="flex md:hidden justify-start items-center">
+            <button onClick={() => setShowMobileMenu(!showMobileMenu)}>
+              <MenuIcon className="w-6 text-gray-800" />
+            </button>
+          </div>
         </div>
       </div>
 
