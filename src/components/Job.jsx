@@ -1,4 +1,6 @@
 import { DateTime } from 'luxon';
+import { ChevronDownIcon } from '@heroicons/react/solid';
+import { useState } from 'react';
 
 export default function Job({
   role,
@@ -10,6 +12,8 @@ export default function Job({
   achievements,
   className,
 }) {
+  const [showAchieves, setShowAchieves] = useState(false);
+
   const start = DateTime.fromFormat(startDate, 'dd/MM/y');
   const end = DateTime.fromFormat(endDate, 'dd/MM/y');
 
@@ -24,35 +28,41 @@ export default function Job({
   const formattedMonths = `${months} month${months > 1 ? 's' : ''}`;
 
   return (
-    <div className={className}>
-      <div className="mb-4 grid grid-cols-[auto_1fr] gap-4">
+    <div onClick={() => setShowAchieves(!showAchieves)} className={`cursor-pointer ${className}`}>
+      <div className="grid grid-cols-[auto_1fr] gap-8">
         <div className="pt-2">{companyImage}</div>
+
         <div>
-          <span className="block font-bold">{role}</span>
-          <span className="block text-sm">{company}</span>
-          <span className="block text-sm">
+          <span className="block text-lg md:text-xl font-bold">{role}</span>
+          <span className="block md:text-lg">{company}</span>
+          <span className="block md:text-lg">
             {formattedStart} - {endDate === 'present' ? 'Present' : formattedEnd}
-            {endDate !== 'present' && ` - ${years ? formattedYears : formattedMonths}`}
+            {endDate !== 'present' && ` (${years ? formattedYears : formattedMonths})`}
           </span>
+
+          <div className="ml-8 mt-2">
+            <ChevronDownIcon className="w-6" />
+          </div>
+
+          {/* Desktop/tablet */}
+          {showAchieves && (
+            <ul className="hidden md:block pl-6 mt-2 list-disc">
+              {achievements.map((achieve) => (
+                <li className="mb-2 last:mb-0">{achieve}</li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
 
-      <div>
-        {tech.map(({ name, image }) => (
-          <div key={name}>
-            {image}
-            <span>{name}</span>
-          </div>
-        ))}
-      </div>
-
-      <ul className="pl-4 list-disc">
-        {achievements.map((point, i) => (
-          <li key={`point-${i}`} className="mb-2">
-            {point}
-          </li>
-        ))}
-      </ul>
+      {/* Mobile */}
+      {showAchieves && (
+        <ul className="md:hidden pl-6 mt-2 list-disc">
+          {achievements.map((achieve) => (
+            <li className="mb-2 last:mb-0">{achieve}</li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

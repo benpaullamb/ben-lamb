@@ -4,13 +4,14 @@ import kyotoImage from '../assets/backgrounds/kyoto-unsplash.jpg';
 import { ReactComponent as IBMImage } from '../assets/companies/IBM.svg';
 import { ReactComponent as IglooImage } from '../assets/companies/IglooEnergy.svg';
 import { ReactComponent as ENSEKImage } from '../assets/companies/ENSEK.svg';
+import PrevNextButtons from '../components/PrevNextButtons';
 
 export default function Experience(props) {
   const jobs = [
     {
       role: 'Software Engineer',
       company: 'ENSEK',
-      companyImage: <ENSEKImage className="w-16" />,
+      companyImage: <ENSEKImage className="w-24" />,
       startDate: '01/11/2021',
       tech: [
         {
@@ -23,7 +24,7 @@ export default function Experience(props) {
     {
       role: 'Full-Stack Engineer',
       company: 'Igloo Energy',
-      companyImage: <IglooImage className="w-16 text-[#f09]" />,
+      companyImage: <IglooImage className="w-24 text-[#f09]" />,
       startDate: '01/12/2020',
       endDate: '01/11/2021',
       tech: [
@@ -44,7 +45,7 @@ export default function Experience(props) {
     {
       role: 'Rapid Prototype Developer',
       company: 'IBM',
-      companyImage: <IBMImage className="w-16 text-[#0f62fe]" />,
+      companyImage: <IBMImage className="w-24 text-[#0f62fe]" />,
       startDate: '01/06/2018',
       endDate: '01/06/2019',
       tech: [
@@ -71,9 +72,15 @@ export default function Experience(props) {
       <Banner title="Experience" subtitle="IBM | Igloo | ENSEK" image={kyotoImage} />
 
       <div className="p-8 container mx-auto">
-        {jobs.map((job, i) => (
-          <Job key={`${job.role}-${job.company}`} {...job} className="mb-8 last:mb-0" />
-        ))}
+        <div className="flex justify-end">
+          <div className="md:w-7/12">
+            {jobs.map((job, i) => (
+              <Job key={`${job.role}-${job.company}`} {...job} className="mb-8 last:mb-0" />
+            ))}
+          </div>
+        </div>
+
+        <PrevNextButtons prev="/skills" prevLabel="Skills" next="/projects" nextLabel="Projects" />
       </div>
     </>
   );
