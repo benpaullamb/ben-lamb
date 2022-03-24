@@ -33,6 +33,7 @@ export default function Job({
           <span className="block">{company}</span>
           <span className="block">
             {formattedStart} - {endDate === 'present' ? 'Present' : formattedEnd}
+            <br className="md:hidden" />
             {endDate !== 'present' && ` (${years ? formattedYears : formattedMonths})`}
           </span>
         </div>

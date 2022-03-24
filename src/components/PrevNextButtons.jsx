@@ -1,9 +1,10 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
 import { Link } from 'react-router-dom';
+import Section from './Section';
 
 export default function PrevNextButtons({ prev, prevLabel, next, nextLabel, className }) {
   return (
-    <div className={`mt-12 md:mt-16 md:flex justify-center ${className}`}>
+    <Section className={`md:flex justify-center ${className}`}>
       <div className="md:w-4/6 flex justify-between">
         <Link to={prev}>
           <div className="flex items-center">
@@ -21,6 +22,6 @@ export default function PrevNextButtons({ prev, prevLabel, next, nextLabel, clas
           <span className="mt-2 block text-3xl">{nextLabel}</span>
         </Link>
       </div>
-    </div>
+    </Section>
   );
 }

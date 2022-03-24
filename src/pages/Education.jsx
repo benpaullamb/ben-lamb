@@ -1,4 +1,5 @@
 import Banner from '../components/Banner';
+import Section from '../components/Section';
 import PrevNextButtons from '../components/PrevNextButtons';
 import cityImage from '../assets/backgrounds/tokyo-city-unsplash.jpg';
 import brunelCrest from '../assets/schools/brunel-crest.png';
@@ -121,60 +122,60 @@ export default function Education(props) {
     <>
       <Banner title="Education" subtitle="1st in Computer Science" image={cityImage} />
 
-      <div className="p-8 container mx-auto">
-        {/* Degree */}
-        <div>
-          <div className="grid grid-cols-[auto_1fr] gap-4">
-            <img src={brunelCrest} alt="Brunel University Logo" className="w-16" />
-            <div>
-              <span className="mb-1 md:mb-0 block text-lg font-bold">Computer Science (1st)</span>
-              <span className="mb-1 md:mb-0 block">
-                Bachelor's Degree <br className="md:hidden" /> with First Class Honours
-              </span>
-              <span className="block">
-                Brunel University London <br className="md:hidden" /> 2016-2020
-              </span>
-            </div>
-          </div>
-
-          <div className="mt-4 md:mt-8 grid md:grid-cols-[repeat(4,auto)] gap-6">
-            {uniGrades.map(({ year, modules }) => (
-              <div key={`uni-year-${year}`}>
-                <span className="mb-1 block font-bold">Year {year}</span>
-                {modules.map(({ name, grade }) => (
-                  <ul className="mb-2 last:mb-0" key={name}>
-                    <li>
-                      {name} ({degreeClass(grade)})
-                    </li>
-                  </ul>
-                ))}
-              </div>
-            ))}
+      {/* Degree */}
+      <Section>
+        <div className="grid grid-cols-[auto_1fr] gap-4">
+          <img src={brunelCrest} alt="Brunel University Logo" className="w-16" />
+          <div>
+            <span className="mb-1 md:mb-0 block text-lg font-bold">Computer Science (1st)</span>
+            <span className="mb-1 md:mb-0 block">
+              Bachelor's Degree <br className="md:hidden" /> with First Class Honours
+            </span>
+            <span className="block">
+              Brunel University London <br className="md:hidden" /> 2016-2020
+            </span>
           </div>
         </div>
 
-        <hr className="my-8" />
-
-        {/* A Levels */}
-        <div>
-          <div className="grid grid-cols-[auto_1fr] gap-4">
-            <img src={hewensLogo} alt="Hewens College Logo" className="w-16" />
-            <div>
-              <span className="block text-lg font-bold">A Levels</span>
-              <span className="block">Hewens College 2014-2016</span>
+        <div className="mt-4 md:mt-8 grid md:grid-cols-[repeat(4,max-content)] gap-6 md:gap-8">
+          {uniGrades.map(({ year, modules }) => (
+            <div key={`uni-year-${year}`}>
+              <span className="mb-1 block font-bold">Year {year}</span>
+              {modules.map(({ name, grade }) => (
+                <ul className="mb-2 last:mb-0" key={name}>
+                  <li>
+                    {name} ({degreeClass(grade)})
+                  </li>
+                </ul>
+              ))}
             </div>
-          </div>
-          <ul className="mt-4">
-            {aLevelGrades.map(({ subject, grade }) => (
-              <li className="mb-2 last:mb-0">
-                {subject} ({grade})
-              </li>
-            ))}
-          </ul>
+          ))}
         </div>
+      </Section>
 
-        <PrevNextButtons prev="/projects" prevLabel="Projects" next="/contact" nextLabel="Contact" />
+      <div className="px-8 container mx-auto">
+        <hr />
       </div>
+
+      {/* A Levels */}
+      <Section>
+        <div className="grid grid-cols-[auto_1fr] gap-4">
+          <img src={hewensLogo} alt="Hewens College Logo" className="w-16" />
+          <div>
+            <span className="block text-lg font-bold">A Levels</span>
+            <span className="block">Hewens College 2014-2016</span>
+          </div>
+        </div>
+        <ul className="mt-4">
+          {aLevelGrades.map(({ subject, grade }) => (
+            <li className="mb-2 last:mb-0" key={subject}>
+              {subject} ({grade})
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      <PrevNextButtons prev="/projects" prevLabel="Projects" next="/contact" nextLabel="Contact" />
     </>
   );
 }
