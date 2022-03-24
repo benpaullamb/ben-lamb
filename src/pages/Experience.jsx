@@ -72,8 +72,8 @@ export default function Experience(props) {
       <Banner title="Experience" subtitle="IBM | Igloo | ENSEK" image={kyotoImage} />
 
       <div className="p-8 container mx-auto">
-        <div className="flex justify-end">
-          <div className="md:w-7/12">
+        <div className="flex justify-center">
+          <div>
             {jobs.map((job, i) => (
               <Job key={`${job.role}-${job.company}`} {...job} className="mb-8 last:mb-0" />
             ))}
