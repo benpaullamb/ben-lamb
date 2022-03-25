@@ -47,7 +47,6 @@ export default function Skills(props) {
       'Responsive Design',
       'Prettier',
       'ESLint',
-      'Luxon/Moment',
       'Socket.IO',
       'Handlebars',
       'AngularJs',
