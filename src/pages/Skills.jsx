@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import Banner from '../components/Banner';
 import SkillSet from '../components/SkillSet';
 import autumnImage from '../assets/backgrounds/japan-autumn-unsplash.jpg';
@@ -88,6 +89,11 @@ export default function Skills(props) {
 
   return (
     <>
+      <Helmet>
+        <meta property="og:url" content="https://ben-lamb.vercel.app/skills" />
+        <title>Ben Lamb - Skills</title>
+      </Helmet>
+
       <Banner title="Skills" subtitle="Languages &amp; Libraries" image={autumnImage} />
 
       <SkillSet name="Frontend" {...frontend} />
