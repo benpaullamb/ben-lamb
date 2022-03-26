@@ -32,7 +32,7 @@ export default function Contact(props) {
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center items-center">
           {contacts.map(({ label, image: Image, link }) => (
-            <a href={link} target="_blank" rel="noreferrer" className="flex flex-col items-center">
+            <a href={link} target="_blank" rel="noreferrer" key={label} className="flex flex-col items-center">
               <Image className="w-16" />
               <span className="mt-2 block text-lg">{label}</span>
             </a>
