@@ -1,30 +1,46 @@
-import { ReactComponent as GitHubIcon } from '../assets/companies/GitHub.svg';
-import { ReactComponent as LinkedInIcon } from '../assets/companies/LinkedIn.svg';
 import Banner from '../components/Banner';
+import Section from '../components/Section';
+import PrevNextButtons from '../components/PrevNextButtons';
+import { ReactComponent as GitHubImage } from '../assets/contact/github.svg';
+import { ReactComponent as LinkedInImage } from '../assets/contact/linkedin.svg';
+import { ReactComponent as GmailImage } from '../assets/contact/gmail.svg';
 import sunsetImage from '../assets/backgrounds/japan-sunset-unsplash.jpg';
 
 export default function Contact(props) {
+  const contacts = [
+    {
+      label: 'benpaullamb@gmail.com',
+      image: GmailImage,
+      link: 'mailto:benpaullamb@gmail.com',
+    },
+    {
+      label: 'GitHub',
+      image: GitHubImage,
+      link: 'https://github.com/benpaullamb',
+    },
+    {
+      label: 'LinkedIn',
+      image: LinkedInImage,
+      link: 'https://www.linkedin.com/in/ben-paul-lamb/',
+    },
+  ];
+
   return (
     <>
       <Banner title="Contact" subtitle="Email | GitHub | LinkedIn" image={sunsetImage} />
 
-      <div className="p-8 container mx-auto">
-        <span className="mb-4 block text-lg">benpaullamb@gmail.com</span>
+      <Section>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center items-center">
+          {contacts.map(({ label, image: Image, link }) => (
+            <a href={link} target="_blank" rel="noreferrer" className="flex flex-col items-center">
+              <Image className="w-16" />
+              <span className="mt-2 block text-lg">{label}</span>
+            </a>
+          ))}
+        </div>
+      </Section>
 
-        <a href="https://github.com/benpaullamb" target="_blank" rel="noreferrer" className="mb-4 flex items-center">
-          <GitHubIcon className="w-8" />
-          <span className="ml-2 text-lg">GitHub</span>
-        </a>
-
-        <a
-          href="https://www.linkedin.com/in/ben-paul-lamb/"
-          target="_blank"
-          rel="noreferrer"
-          className="flex items-center">
-          <LinkedInIcon className="w-8 text-[#0a66c2]" />
-          <span className="ml-2 text-lg">LinkedIn</span>
-        </a>
-      </div>
+      <PrevNextButtons prev="/education" prevLabel="Education" next="/" nextLabel="Home" />
     </>
   );
 }

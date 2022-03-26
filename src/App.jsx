@@ -6,7 +6,6 @@ import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import Education from './pages/Education';
 import Contact from './pages/Contact';
-import Interests from './pages/Interests';
 
 import NavBar from './components/NavBar';
 
@@ -22,7 +21,6 @@ export default function App() {
         <Route path="projects" element={<Projects />} />
         <Route path="education" element={<Education />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="interests" element={<Interests />} />
       </Routes>
     </div>
   );

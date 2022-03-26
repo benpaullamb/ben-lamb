@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet';
 import Banner from '../components/Banner';
 import SkillSet from '../components/SkillSet';
+import PrevNextButtons from '../components/PrevNextButtons';
 import autumnImage from '../assets/backgrounds/japan-autumn-unsplash.jpg';
 
 import { ReactComponent as AwsImage } from '../assets/dev/aws.svg';
@@ -87,6 +88,8 @@ export default function Skills(props) {
     others: ['AWS CDK', 'Jira', 'Git', 'GitHub', 'Bitbucket', 'Azure DevOps', 'IBM Cloud'],
   };
 
+  // Group other skills
+  // 6 mains per
   return (
     <>
       <Helmet>
@@ -101,6 +104,8 @@ export default function Skills(props) {
       <SkillSet name="Backend" dark {...backend} />
 
       <SkillSet name="DevOps" {...devOps} />
+
+      <PrevNextButtons prev="/" prevLabel="Home" next="/experience" nextLabel="Experience" />
     </>
   );
 }

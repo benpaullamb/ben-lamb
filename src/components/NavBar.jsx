@@ -30,10 +30,6 @@ export default function NavBar() {
       to: 'contact',
       label: 'Contact',
     },
-    {
-      to: 'interests',
-      label: 'Interests',
-    },
   ];
 
   return (

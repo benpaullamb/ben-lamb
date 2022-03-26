@@ -1,11 +1,11 @@
 import Banner from '../components/Banner';
 import Section from '../components/Section';
 import Job from '../components/Job';
+import PrevNextButtons from '../components/PrevNextButtons';
 import kyotoImage from '../assets/backgrounds/kyoto-unsplash.jpg';
 import { ReactComponent as IBMImage } from '../assets/companies/IBM.svg';
 import { ReactComponent as IglooImage } from '../assets/companies/IglooEnergy.svg';
 import { ReactComponent as ENSEKImage } from '../assets/companies/ENSEK.svg';
-import PrevNextButtons from '../components/PrevNextButtons';
 
 export default function Experience(props) {
   const jobs = [
@@ -72,11 +72,13 @@ export default function Experience(props) {
     <>
       <Banner title="Experience" subtitle="IBM | Igloo | ENSEK" image={kyotoImage} />
 
-      <Section className="flex justify-center">
-        <div>
-          {jobs.map((job, i) => (
-            <Job key={`${job.role}-${job.company}`} {...job} className="mb-8 last:mb-0" />
-          ))}
+      <Section>
+        <div className="flex justify-center">
+          <div>
+            {jobs.map((job, i) => (
+              <Job key={`${job.role}-${job.company}`} {...job} className="mb-8 last:mb-0" />
+            ))}
+          </div>
         </div>
       </Section>
 
