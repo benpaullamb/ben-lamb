@@ -21,7 +21,6 @@ My mobile-first, responsive, SPA personal website.
 - React
 - Tailwind
 - Vercel
-- React Transition Group
 
 ## Getting Started
 

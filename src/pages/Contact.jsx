@@ -1,6 +1,5 @@
 import Banner from '../components/Banner';
 import Section from '../components/Section';
-import PrevNextButtons from '../components/PrevNextButtons';
 import { ReactComponent as GitHubImage } from '../assets/contact/github.svg';
 import { ReactComponent as LinkedInImage } from '../assets/contact/linkedin.svg';
 import { ReactComponent as GmailImage } from '../assets/contact/gmail.svg';
@@ -27,7 +26,7 @@ export default function Contact(props) {
 
   return (
     <>
-      <Banner title="Contact" subtitle="Email | GitHub | LinkedIn" image={sunsetImage} />
+      <Banner title="Contact" subtitle="Email | GitHub | LinkedIn" image={sunsetImage} id="contact" />
 
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center items-center">
@@ -39,8 +38,6 @@ export default function Contact(props) {
           ))}
         </div>
       </Section>
-
-      <PrevNextButtons prev="/education" prevLabel="Education" next="/" nextLabel="Home" />
     </>
   );
 }

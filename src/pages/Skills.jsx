@@ -1,7 +1,5 @@
-import { Helmet } from 'react-helmet';
 import Banner from '../components/Banner';
 import SkillSet from '../components/SkillSet';
-import PrevNextButtons from '../components/PrevNextButtons';
 import autumnImage from '../assets/backgrounds/japan-autumn-unsplash.jpg';
 
 import { ReactComponent as AwsImage } from '../assets/dev/aws.svg';
@@ -92,20 +90,13 @@ export default function Skills(props) {
   // 6 mains per
   return (
     <>
-      <Helmet>
-        <meta property="og:url" content="https://ben-lamb.vercel.app/skills" />
-        <title>Ben Lamb - Skills</title>
-      </Helmet>
-
-      <Banner title="Skills" subtitle="Languages &amp; Libraries" image={autumnImage} />
+      <Banner title="Skills" subtitle="Languages &amp; Libraries" image={autumnImage} id="skills" />
 
       <SkillSet name="Frontend" {...frontend} />
 
       <SkillSet name="Backend" dark {...backend} />
 
       <SkillSet name="DevOps" {...devOps} />
-
-      <PrevNextButtons prev="/" prevLabel="Home" next="/experience" nextLabel="Experience" />
     </>
   );
 }

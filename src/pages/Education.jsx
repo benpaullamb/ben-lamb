@@ -1,6 +1,5 @@
 import Banner from '../components/Banner';
 import Section from '../components/Section';
-import PrevNextButtons from '../components/PrevNextButtons';
 import cityImage from '../assets/backgrounds/tokyo-city-unsplash.jpg';
 import brunelCrest from '../assets/schools/brunel-crest.png';
 import hewensLogo from '../assets/schools/hewens-college.png';
@@ -120,7 +119,7 @@ export default function Education(props) {
 
   return (
     <>
-      <Banner title="Education" subtitle="1st in Computer Science" image={cityImage} />
+      <Banner title="Education" subtitle="1st in Computer Science" image={cityImage} id="education" />
 
       {/* Degree */}
       <Section>
@@ -174,8 +173,6 @@ export default function Education(props) {
           ))}
         </ul>
       </Section>
-
-      <PrevNextButtons prev="/projects" prevLabel="Projects" next="/contact" nextLabel="Contact" />
     </>
   );
 }

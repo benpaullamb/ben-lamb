@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, animateScroll } from 'react-scroll';
 import { MenuIcon, XIcon } from '@heroicons/react/solid';
 
 export default function NavBar() {
@@ -15,12 +15,12 @@ export default function NavBar() {
       label: 'Experience',
     },
     {
-      to: 'projects',
-      label: 'Projects',
-    },
-    {
       to: 'education',
       label: 'Education',
+    },
+    {
+      to: 'projects',
+      label: 'Projects',
     },
     {
       to: 'contact',
@@ -34,19 +34,27 @@ export default function NavBar() {
     }
   };
 
+  const scrollToTop = () => {
+    animateScroll.scrollToTop();
+  };
+
   return (
-    <nav className="w-full absolute top-0 bg-gray-100/50 shadow-md">
+    <nav className="w-full fixed top-0 z-20 bg-gray-100/50 shadow-md">
       {/* App bar */}
       <div className="w-full p-4 backdrop-blur container mx-auto">
         {/* Desktop menu */}
         <div className="hidden md:flex justify-between items-center">
-          <Link to="/" className="text-gray-800 text-lg font-medium">
+          <button onClick={scrollToTop} className="text-gray-800 text-lg font-medium">
             Ben Lamb
-          </Link>
+          </button>
 
           <div>
             {links.map(({ to, label }, i) => (
-              <Link to={to} key={to} className="mr-8 last:mr-0 uppercase text-gray-800 font-medium">
+              <Link
+                to={to}
+                smooth
+                key={to}
+                className="mr-8 last:mr-0 cursor-pointer uppercase text-gray-800 font-medium">
                 {label}
               </Link>
             ))}
@@ -59,9 +67,9 @@ export default function NavBar() {
             <MenuIcon className="w-6 text-gray-800" />
           </button>
 
-          <Link to="/" className="text-gray-800 text-lg font-medium">
+          <button onClick={scrollToTop} className="cursor-pointer text-gray-800 text-lg font-medium">
             Ben Lamb
-          </Link>
+          </button>
         </div>
       </div>
 
@@ -70,15 +78,20 @@ export default function NavBar() {
         <div
           onClick={touchOffMobileMenu}
           className="w-full h-full md:hidden 
-            fixed top-0 left-0 z-10 overflow-hidden 
+            fixed top-0 left-0 z-30 overflow-hidden 
             bg-gray-500/50">
-          <div className="p-8 z-20 shadow-xl bg-white">
+          <div className="p-8 z-40 shadow-xl bg-white">
             <button onClick={() => setShowMobileMenu(false)} className="absolute top-8 right-8 z-20">
               <XIcon className="w-6" />
             </button>
 
             {links.map(({ to, label }, i) => (
-              <Link to={to} onClick={() => setShowMobileMenu(false)} key={to} className="mb-4 last:mb-0 block text-xl">
+              <Link
+                to={to}
+                smooth
+                onClick={() => setShowMobileMenu(false)}
+                key={to}
+                className="mb-4 last:mb-0 block cursor-pointer text-xl">
                 {label}
               </Link>
             ))}

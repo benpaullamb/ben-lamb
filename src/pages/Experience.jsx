@@ -1,7 +1,6 @@
 import Banner from '../components/Banner';
 import Section from '../components/Section';
 import Job from '../components/Job';
-import PrevNextButtons from '../components/PrevNextButtons';
 import kyotoImage from '../assets/backgrounds/kyoto-unsplash.jpg';
 import { ReactComponent as IBMImage } from '../assets/companies/IBM.svg';
 import { ReactComponent as IglooImage } from '../assets/companies/IglooEnergy.svg';
@@ -70,7 +69,7 @@ export default function Experience(props) {
 
   return (
     <>
-      <Banner title="Experience" subtitle="IBM | Igloo | ENSEK" image={kyotoImage} />
+      <Banner title="Experience" subtitle="IBM | Igloo | ENSEK" image={kyotoImage} id="experience" />
 
       <Section>
         <div className="flex justify-center">
@@ -81,8 +80,6 @@ export default function Experience(props) {
           </div>
         </div>
       </Section>
-
-      <PrevNextButtons prev="/skills" prevLabel="Skills" next="/projects" nextLabel="Projects" />
     </>
   );
 }
