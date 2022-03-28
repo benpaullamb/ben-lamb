@@ -11,7 +11,7 @@ export default function SkillSet({ name, skillGroups, className, reverse = false
         <h2 className="text-4xl lg:text-7xl text-gray-800">{name}</h2>
       </div>
 
-      <div className="px-8 lg:grid grid-cols-[auto,auto]">
+      <div className="px-8 md:px-0 lg:grid grid-cols-[auto,auto]">
         {skillGroups.map((group) => (
           <SkillGroup {...group} key={group.name} />
         ))}
