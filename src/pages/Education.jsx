@@ -136,7 +136,7 @@ export default function Education(props) {
           </div>
         </div>
 
-        <div className="mt-4 md:mt-8 grid md:grid-cols-[repeat(4,max-content)] gap-6 md:gap-8">
+        <div className="mt-4 md:mt-8 grid xl:grid-cols-[repeat(4,max-content)] gap-6 md:gap-8">
           {uniGrades.map(({ year, modules }) => (
             <div key={`uni-year-${year}`}>
               <span className="mb-1 block font-bold">Year {year}</span>
@@ -151,10 +151,6 @@ export default function Education(props) {
           ))}
         </div>
       </Section>
-
-      <div className="px-8 container mx-auto">
-        <hr />
-      </div>
 
       {/* A Levels */}
       <Section>

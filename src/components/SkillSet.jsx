@@ -1,20 +1,32 @@
-import Section from './Section';
+import classNames from 'classnames';
+import SkillGroup from './SkillGroup';
 
-export default function SkillSet({ name, main, others, dark = false }) {
+export default function SkillSet({ name, skillGroups, reverse = false }) {
   return (
-    <Section dark={dark}>
-      <h2 className="text-center text-2xl font-bold uppercase">{name}</h2>
+    <div className="lg:grid grid-cols-[1fr,1fr]">
+      <div
+        className={classNames('p-8 flex justify-center items-center', {
+          'lg:hidden': !reverse,
+        })}>
+        <h2 className="text-4xl lg:text-7xl text-gray-800">{name}</h2>
+      </div>
 
-      <div className="mt-4 grid grid-cols-3 gap-4 md:flex md:justify-evenly items-center">
-        {main.map(({ name, image: Image }) => (
-          <div className="flex flex-col items-center" key={name}>
-            <Image className="w-16 h-16" />
-            <span className="mt-2 block font-bold">{name}</span>
-          </div>
+      <div
+        className={classNames('lg:grid grid-cols-[auto,auto]', {
+          'pl-8 lg:pl-0': !reverse,
+          'pr-8 lg:pr-0': reverse,
+        })}>
+        {skillGroups.map((group) => (
+          <SkillGroup {...group} key={group.name} />
         ))}
       </div>
 
-      <p className="mt-8 text-sm text-center">{others.join(' | ')}</p>
-    </Section>
+      <div
+        className={classNames('hidden justify-center items-center', {
+          'lg:flex': !reverse,
+        })}>
+        <h2 className="text-7xl text-gray-800">{name}</h2>
+      </div>
+    </div>
   );
 }
