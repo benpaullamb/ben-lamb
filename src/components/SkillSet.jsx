@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 import SkillGroup from './SkillGroup';
 
-export default function SkillSet({ name, skillGroups, reverse = false }) {
+export default function SkillSet({ name, skillGroups, className, reverse = false }) {
   return (
-    <div className="lg:grid grid-cols-[1fr,1fr]">
+    <div className={classNames('lg:grid grid-cols-[1fr,1fr]', className)}>
       <div
         className={classNames('p-8 flex justify-center items-center', {
           'lg:hidden': !reverse,
@@ -11,11 +11,7 @@ export default function SkillSet({ name, skillGroups, reverse = false }) {
         <h2 className="text-4xl lg:text-7xl text-gray-800">{name}</h2>
       </div>
 
-      <div
-        className={classNames('lg:grid grid-cols-[auto,auto]', {
-          'pl-8 lg:pl-0': !reverse,
-          'pr-8 lg:pr-0': reverse,
-        })}>
+      <div className="lg:grid grid-cols-[auto,auto]">
         {skillGroups.map((group) => (
           <SkillGroup {...group} key={group.name} />
         ))}

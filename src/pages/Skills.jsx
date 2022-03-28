@@ -133,7 +133,7 @@ export default function Skills(props) {
 
       <SkillSet skillGroups={backendGroups} name="Backend" reverse />
 
-      <SkillSet skillGroups={devOpGroups} name="DevOps" />
+      <SkillSet skillGroups={devOpGroups} name="DevOps" className="pb-8" />
     </>
   );
 }
