@@ -61,7 +61,7 @@ export default function NavBar() {
           </div>
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile bar */}
         <div className="flex md:hidden justify-between items-center">
           <button onClick={() => setShowMobileMenu(!showMobileMenu)}>
             <MenuIcon className="w-6 text-gray-800" />
@@ -73,7 +73,7 @@ export default function NavBar() {
         </div>
       </div>
 
-      {/* Mobile menu links */}
+      {/* Mobile menu */}
       {showMobileMenu && (
         <div
           onClick={touchOffMobileMenu}
