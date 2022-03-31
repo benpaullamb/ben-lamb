@@ -1,0 +1,177 @@
+{
+  "skills": {
+    "frontend": [
+      {
+        "group": "Frontend",
+        "tech": [
+          "React",
+          "Vue",
+          "Vuex",
+          "Nuxt",
+          "JavaScript",
+          "HTML5",
+          "Webpack",
+          "Vite",
+          "Monorepos",
+          "Lerna",
+          "Microfrontends",
+          "single-spa",
+          "Cypress",
+          "Testing Library",
+          "Figma",
+          "Responsive Design",
+          "Socket.IO",
+          "Handlebars",
+          "AngularJs",
+          "Prettier",
+          "ESLint"
+        ]
+      },
+      {
+        "group": "Styling",
+        "tech": ["Tailwind", "Sass", "CSS3", "Bootstrap", "CSS Modules", "Emotion"]
+      },
+      {
+        "group": "Platforms",
+        "tech": ["Storybook", "Electron", "React Native", "MJML Emails", "Chrome Extensions", "VS Code Extensions"]
+      }
+    ],
+    "backend": [
+      "AWS IAM",
+      "AWS CDK",
+      "AWS S3",
+      "AWS SES",
+      "AWS SQS",
+      "AWS Amplify",
+      "AWS Lambda",
+      "AWS DynamoDB",
+      "AWS API Gateway",
+      "AWS CloudFront",
+      "AWS Lightsail",
+      "AWS CloudWatch",
+      "Node.js",
+      "Express",
+      "TypeORM",
+      "MongoDB",
+      "MySQL",
+      "GraphQL",
+      "Apollo",
+      "Jest",
+      "Git",
+      "GitHub",
+      "Bitbucket",
+      "Azure DevOps",
+      "Azure Pipelines",
+      "Jira",
+      "Vercel",
+      "Contentful",
+      "Airtable",
+      "Zendesk",
+      "Sentry",
+      "Docker",
+      "Microservices",
+      "IBM Cloud",
+      "Python",
+      "MS IIS"
+    ]
+  },
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "ENSEK",
+      "startDate": "01/11/2021",
+      "achievements": ["Built multiple items of a new component library in Storybook."]
+    },
+    {
+      "title": "Full-Stack Engineer",
+      "company": "Igloo Energy",
+      "startDate": "01/12/2020",
+      "endDate": "01/11/2021",
+      "achievements": [
+        "Developed dynamic, responsive web pages working with designers, product managers, and stakeholders up to the director level. Wrote frontend tests, cross-browser tested, and maintained these pages.",
+        "Built microservices/servers that integrated with multiple CRM services, unit tested, and used an ORM with a SQL database. Automated deployment with AWS CDK.",
+        "Designed and created a dynamic system that allowed marketing staff to construct web pages in a CMS, saving staff hours/days of work for each page.",
+        "Played a key role in building a digital customer journey that is paramount to the sale of heat pumps, resulting in a 300% increase in conversion.",
+        "Discovered and set a standard for building email templates. Automated sending emails.",
+        "Agile team (remote) using both Kanban and Scrum. Performed code reviews and pair programming."
+      ]
+    },
+    {
+      "title": "Rapid Prototype Developer",
+      "company": "IBM",
+      "startDate": "01/06/2018",
+      "endDate": "01/06/2019",
+      "achievements": [
+        "Agile team using Scrum.",
+        "Developed a “smart EV charging” mobile-first web app.",
+        "Built a frontend for a large accounting firms transcript analyser.",
+        "Created and maintained a production CRM tool (>100 users).",
+        "Made a visitor registration system prototype that I presented to a Chief Executive.",
+        "Re-built my own teams internal website.",
+        "Worked independently with two external clients and on three IBM internal projects.",
+        "Participated in, and taught on, multiple IBM technical bootcamps."
+      ]
+    }
+  ],
+  "education": {
+    "uni": [
+      {
+        "year": 4,
+        "modules": {
+          "Artificial Intelligence": "A+",
+          "Dissertation": "A",
+          "Network Computing": "A",
+          "Advanced Topics": "A",
+          "Cybersecurity": "B"
+        }
+      },
+      {
+        "year": 3,
+        "modules": {
+          "Work Placement": "A*"
+        }
+      },
+      {
+        "year": 2,
+        "modules": {
+          "Group Project": "A*",
+          "Algorithms and their Applications": "A+",
+          "Networks and Operating Systems": "A+",
+          "Usability Engineering": "A+",
+          "Software Development and Management": "A"
+        }
+      },
+      {
+        "year": 1,
+        "modules": {
+          "Logic and Computation": "A*",
+          "Group Project": "A+",
+          "Information Systems and Organisations": "A+",
+          "Software Implementation": "A",
+          "Software Design": "A",
+          "Data and Information": "A",
+          "Fundamental Programming": "B+"
+        }
+      }
+    ],
+    "aLevels": {
+      "Maths": "B",
+      "Physics": "C",
+      "Computing": "C"
+    }
+  },
+  "contacts": {
+    "email": {
+      "label": "benpaullamb@gmail.com",
+      "link": "mailto:benpaullamb@gmail.com"
+    },
+    "github": {
+      "label": "GitHub",
+      "link": "https://github.com/benpaullamb/"
+    },
+    "linkedIn": {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/ben-paul-lamb/"
+    }
+  }
+}
