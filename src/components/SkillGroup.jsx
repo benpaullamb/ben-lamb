@@ -21,7 +21,7 @@ export default function SkillGroup({ title, highlights, groups, className }) {
           )}
           <ul className="flex flex-wrap gap-1">
             {tech.map((tool) => (
-              <li className="px-2 bg-red-900 rounded-full" key={tool}>
+              <li className="px-2 border border-gray-600" key={tool}>
                 {tool}
               </li>
             ))}
