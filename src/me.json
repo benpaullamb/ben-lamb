@@ -1,79 +1,112 @@
 {
+  "summary": [
+    "2-3 years experience",
+    "React - Vue - Node - AWS",
+    "IBM - Igloo Energy - ENSEK",
+    "1st in Computer Science",
+    "39 personal projects"
+  ],
   "skills": {
-    "frontend": [
-      {
-        "group": "Frontend",
-        "tech": [
-          "React",
-          "Vue",
-          "Vuex",
-          "Nuxt",
-          "JavaScript",
-          "HTML5",
-          "Webpack",
-          "Vite",
-          "Monorepos",
-          "Lerna",
-          "Microfrontends",
-          "single-spa",
-          "Cypress",
-          "Testing Library",
-          "Figma",
-          "Responsive Design",
-          "Socket.IO",
-          "Handlebars",
-          "AngularJs",
-          "Prettier",
-          "ESLint"
-        ]
-      },
-      {
-        "group": "Styling",
-        "tech": ["Tailwind", "Sass", "CSS3", "Bootstrap", "CSS Modules", "Emotion"]
-      },
-      {
-        "group": "Platforms",
-        "tech": ["Storybook", "Electron", "React Native", "MJML Emails", "Chrome Extensions", "VS Code Extensions"]
-      }
-    ],
-    "backend": [
-      "AWS IAM",
-      "AWS CDK",
-      "AWS S3",
-      "AWS SES",
-      "AWS SQS",
-      "AWS Amplify",
-      "AWS Lambda",
-      "AWS DynamoDB",
-      "AWS API Gateway",
-      "AWS CloudFront",
-      "AWS Lightsail",
-      "AWS CloudWatch",
-      "Node.js",
-      "Express",
-      "TypeORM",
-      "MongoDB",
-      "MySQL",
-      "GraphQL",
-      "Apollo",
-      "Jest",
-      "Git",
-      "GitHub",
-      "Bitbucket",
-      "Azure DevOps",
-      "Azure Pipelines",
-      "Jira",
-      "Vercel",
-      "Contentful",
-      "Airtable",
-      "Zendesk",
-      "Sentry",
-      "Docker",
-      "Microservices",
-      "IBM Cloud",
-      "Python",
-      "MS IIS"
-    ]
+    "frontend": {
+      "highlights": ["React", "Vue"],
+      "groups": [
+        {
+          "tech": [
+            "Vuex",
+            "Nuxt",
+            "JavaScript",
+            "HTML5",
+            "Webpack",
+            "Vite",
+            "Monorepos",
+            "Lerna",
+            "Microfrontends",
+            "single-spa",
+            "Cypress",
+            "Testing Library",
+            "Figma",
+            "Responsive Design",
+            "Socket.IO",
+            "Handlebars",
+            "AngularJs",
+            "Prettier",
+            "ESLint"
+          ]
+        },
+        {
+          "name": "Styling",
+          "tech": ["Tailwind", "Sass", "CSS3", "Bootstrap", "CSS Modules", "Emotion"]
+        },
+        {
+          "name": "Platforms",
+          "tech": ["Storybook", "Electron", "React Native", "MJML Emails", "Chrome Extensions", "VS Code Extensions"]
+        }
+      ]
+    },
+    "backend": {
+      "highlights": ["Node.js", "Express"],
+      "groups": [
+        {
+          "tech": [
+            "TypeORM",
+            "MongoDB",
+            "MySQL",
+            "GraphQL",
+            "Apollo",
+            "Jest",
+            "Contentful",
+            "Airtable",
+            "Zendesk",
+            "Microservices",
+            "Python"
+          ]
+        }
+      ]
+    },
+    "devOps": {
+      "highlights": ["AWS", "Azure Pipelines"],
+      "groups": [
+        {
+          "tech": [
+            "Vercel",
+            "Azure Pipelines",
+            "Docker",
+            "Git",
+            "GitHub",
+            "Bitbucket",
+            "Azure DevOps",
+            "Jira",
+            "Sentry",
+            "MS IIS",
+            "DNS"
+          ]
+        },
+        {
+          "name": "AWS",
+          "tech": [
+            "Amazon S3",
+            "Amazon CloudFront",
+            "Amazon DynamoDB",
+            "Amazon API Gateway",
+            "Amazon SES",
+            "Amazon Route 53",
+            "Amazon Lightsail",
+            "Amazon SQS",
+            "Amazon CloudWatch",
+            "Amazon Cognito",
+            "AWS CDK",
+            "AWS CLI",
+            "AWS IAM",
+            "AWS Amplify",
+            "AWS Lambda",
+            "AWS Secrets Manager",
+            "AWS Systems Manager",
+            "AWS Certificate Manager",
+            "AWS WAF"
+          ]
+        }
+      ]
+    }
   },
   "experience": [
     {
@@ -161,17 +194,8 @@
     }
   },
   "contacts": {
-    "email": {
-      "label": "benpaullamb@gmail.com",
-      "link": "mailto:benpaullamb@gmail.com"
-    },
-    "github": {
-      "label": "GitHub",
-      "link": "https://github.com/benpaullamb/"
-    },
-    "linkedIn": {
-      "label": "LinkedIn",
-      "link": "https://www.linkedin.com/in/ben-paul-lamb/"
-    }
+    "email": "benpaullamb@gmail.com",
+    "github": "https://github.com/benpaullamb/",
+    "linkedIn": "https://www.linkedin.com/in/ben-paul-lamb/"
   }
 }
