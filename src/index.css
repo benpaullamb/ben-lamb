@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 * {
-  @apply text-white;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -14,5 +13,5 @@ body,
 }
 
 body {
-  @apply bg-zinc-900;
+  @apply bg-zinc-900 text-white;
 }

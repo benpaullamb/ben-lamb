@@ -10,101 +10,74 @@
     "frontend": {
       "highlights": ["React", "Vue"],
       "groups": [
-        {
-          "tech": [
-            "Vuex",
-            "Nuxt",
-            "JavaScript",
-            "HTML5",
-            "Webpack",
-            "Vite",
-            "Monorepos",
-            "Lerna",
-            "Microfrontends",
-            "single-spa",
-            "Cypress",
-            "Testing Library",
-            "Figma",
-            "Responsive Design",
-            "Socket.IO",
-            "Handlebars",
-            "AngularJs",
-            "Prettier",
-            "ESLint"
-          ]
-        },
-        {
-          "name": "Styling",
-          "tech": ["Tailwind", "Sass", "CSS3", "Bootstrap", "CSS Modules", "Emotion"]
-        },
-        {
-          "name": "Platforms",
-          "tech": ["Storybook", "Electron", "React Native", "MJML Emails", "Chrome Extensions", "VS Code Extensions"]
-        }
+        [
+          "Vuex",
+          "Nuxt",
+          "JavaScript",
+          "HTML5",
+          "Webpack",
+          "Vite",
+          "Monorepos",
+          "Lerna",
+          "Microfrontends",
+          "single-spa",
+          "Cypress",
+          "Testing Library",
+          "Figma",
+          "Responsive Design",
+          "Socket.IO",
+          "Handlebars",
+          "AngularJs",
+          "Prettier",
+          "ESLint"
+        ],
+        ["Tailwind", "Sass", "CSS3", "Bootstrap", "CSS Modules", "Emotion"],
+        ["Storybook", "Electron", "React Native", "MJML Emails", "Chrome Extensions", "VS Code Extensions"]
       ]
     },
     "backend": {
       "highlights": ["Node.js", "Express"],
       "groups": [
-        {
-          "tech": [
-            "TypeORM",
-            "MongoDB",
-            "MySQL",
-            "GraphQL",
-            "Apollo",
-            "Jest",
-            "Contentful",
-            "Airtable",
-            "Zendesk",
-            "Microservices",
-            "Python"
-          ]
-        }
+        [
+          "TypeORM",
+          "MongoDB",
+          "MySQL",
+          "GraphQL",
+          "Apollo",
+          "Jest",
+          "Contentful",
+          "Airtable",
+          "Zendesk",
+          "Microservices",
+          "Python"
+        ]
       ]
     },
     "devOps": {
       "highlights": ["AWS", "Azure Pipelines"],
       "groups": [
-        {
-          "tech": [
-            "Vercel",
-            "Azure Pipelines",
-            "Docker",
-            "Git",
-            "GitHub",
-            "Bitbucket",
-            "Azure DevOps",
-            "Jira",
-            "Sentry",
-            "MS IIS",
-            "DNS"
-          ]
-        },
-        {
-          "name": "AWS",
-          "tech": [
-            "Amazon S3",
-            "Amazon CloudFront",
-            "Amazon DynamoDB",
-            "Amazon API Gateway",
-            "Amazon SES",
-            "Amazon Route 53",
-            "Amazon Lightsail",
-            "Amazon SQS",
-            "Amazon CloudWatch",
-            "Amazon Cognito",
-            "AWS CDK",
-            "AWS CLI",
-            "AWS IAM",
-            "AWS Amplify",
-            "AWS Lambda",
-            "AWS Secrets Manager",
-            "AWS Systems Manager",
-            "AWS Certificate Manager",
-            "AWS WAF"
-          ]
-        }
+        ["Vercel", "Docker", "Git", "GitHub", "Bitbucket", "Azure DevOps", "Jira", "Sentry", "MS IIS", "DNS"],
+        [
+          "Amazon S3",
+          "Amazon CloudFront",
+          "Amazon DynamoDB",
+          "Amazon API Gateway",
+          "Amazon SES",
+          "Amazon Route 53",
+          "Amazon Lightsail",
+          "Amazon SQS",
+          "Amazon CloudWatch",
+          "Amazon Cognito",
+          "AWS CDK",
+          "AWS CLI",
+          "AWS IAM",
+          "AWS Amplify",
+          "AWS Lambda",
+          "AWS Secrets Manager",
+          "AWS Systems Manager",
+          "AWS Certificate Manager",
+          "AWS WAF"
+        ]
       ]
     }
   },
@@ -112,14 +85,14 @@
     {
       "title": "Software Engineer",
       "company": "ENSEK",
-      "startDate": "01/11/2021",
+      "startDate": "2021-11",
       "achievements": ["Built multiple items of a new component library in Storybook."]
     },
     {
       "title": "Full-Stack Engineer",
       "company": "Igloo Energy",
-      "startDate": "01/12/2020",
-      "endDate": "01/11/2021",
+      "startDate": "2020-12",
+      "endDate": "2021-11",
       "achievements": [
         "Developed dynamic, responsive web pages working with designers, product managers, and stakeholders up to the director level. Wrote frontend tests, cross-browser tested, and maintained these pages.",
         "Built microservices/servers that integrated with multiple CRM services, unit tested, and used an ORM with a SQL database. Automated deployment with AWS CDK.",
@@ -132,8 +105,8 @@
     {
       "title": "Rapid Prototype Developer",
       "company": "IBM",
-      "startDate": "01/06/2018",
-      "endDate": "01/06/2019",
+      "startDate": "2018-06",
+      "endDate": "2019-06",
       "achievements": [
         "Agile team using Scrum.",
         "Developed a “smart EV charging” mobile-first web app.",
